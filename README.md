@@ -1,4 +1,4 @@
-# 🧠 LOCAL DATA INSTRUCTION RESPONSE CURATION (LDIRC) Tool
+#  LOCAL DATA INSTRUCTION RESPONSE CURATION (LDIRC) Tool
 
 > A production-grade data annotation pipeline for converting raw unstructured text into structured Supervised Fine-Tuning (SFT) datasets using Label Studio.
 
