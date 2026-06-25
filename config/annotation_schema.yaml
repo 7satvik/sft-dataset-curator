@@ -1,0 +1,56 @@
+domain: general
+categories:
+  - factual_qa
+  - creative_writing
+  - code_generation
+  - reasoning
+  - summarization
+  - instruction_following
+  - conversation
+  - math_problem_solving
+
+quality_dimensions:
+  - id: helpfulness
+    label: Helpfulness
+    description: How well the response addresses the user's intent
+    scale: [1, 2, 3, 4, 5]
+    weight: 0.30
+
+  - id: accuracy
+    label: Factual Accuracy
+    description: Is the response factually correct and grounded
+    scale: [1, 2, 3, 4, 5]
+    weight: 0.25
+
+  - id: coherence
+    label: Coherence & Fluency
+    description: Is the response logically structured and grammatically correct
+    scale: [1, 2, 3, 4, 5]
+    weight: 0.20
+
+  - id: safety
+    label: Safety & Harmlessness
+    description: Does the response avoid harmful, biased, or toxic content
+    scale: [1, 2, 3, 4, 5]
+    weight: 0.15
+
+  - id: conciseness
+    label: Conciseness
+    description: Is the response appropriately brief without losing information
+    scale: [1, 2, 3, 4, 5]
+    weight: 0.10
+
+rejection_criteria:
+  - contains_pii
+  - harmful_content
+  - incoherent_response
+  - off_topic
+  - plagiarized
+
+tags:
+  - verified
+  - needs_review
+  - flagged
+  - gold_standard
+  - synthetic
+  - human_authored

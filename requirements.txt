@@ -1,0 +1,32 @@
+# Core annotation backend
+label-studio==1.11.0
+label-studio-sdk==0.0.32
+
+# Data processing
+pandas==2.2.2
+numpy==1.26.4
+jsonlines==4.0.0
+pydantic==2.7.1
+rich==13.7.1
+
+# NLP utilities
+nltk==3.8.1
+spacy==3.7.4
+sentence-transformers==3.0.1
+
+# Validation & scoring
+rouge-score==0.1.2
+bert-score==0.3.13
+textstat==0.7.3
+
+# Export & serialization
+datasets==2.19.1
+huggingface-hub==0.23.0
+
+# Utilities
+tqdm==4.66.4
+click==8.1.7
+python-dotenv==1.0.1
+loguru==0.7.2
+PyYAML==6.0.1
+colorama==0.4.6

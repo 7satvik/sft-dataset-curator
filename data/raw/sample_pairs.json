@@ -1,0 +1,22 @@
+[
+  {
+    "prompt": "What is gradient descent and how does it work in machine learning?",
+    "response": "Gradient descent is an optimization algorithm used to minimize a loss function by iteratively adjusting model parameters in the direction of steepest descent (negative gradient). In each step, the parameters are updated as: θ = θ - α * ∇L(θ), where α is the learning rate and ∇L(θ) is the gradient of the loss. Variants include Stochastic GD (single sample), Mini-batch GD (small batches), and Adam (adaptive learning rates)."
+  },
+  {
+    "prompt": "Write a Python function that checks if a string is a palindrome.",
+    "response": "def is_palindrome(s: str) -> bool:\n    \"\"\"Return True if s is a palindrome, ignoring case and non-alphanumeric characters.\"\"\"\n    cleaned = ''.join(c.lower() for c in s if c.isalnum())\n    return cleaned == cleaned[::-1]\n\n# Examples:\nprint(is_palindrome('racecar'))    # True\nprint(is_palindrome('A man, a plan, a canal: Panama'))  # True\nprint(is_palindrome('hello'))      # False"
+  },
+  {
+    "prompt": "Summarize the key differences between supervised and unsupervised learning.",
+    "response": "Supervised learning trains models on labeled data (input-output pairs) to learn a mapping function, used for classification and regression tasks. Unsupervised learning finds patterns in unlabeled data without predefined outputs, used for clustering, dimensionality reduction, and anomaly detection. Key difference: supervised needs ground-truth labels; unsupervised discovers hidden structure autonomously."
+  },
+  {
+    "prompt": "Explain the concept of tokenization in NLP.",
+    "response": "Tokenization is the process of splitting raw text into smaller units called tokens (words, subwords, or characters). It is the first step in NLP pipelines. Word tokenization splits by spaces/punctuation; subword tokenization (BPE, WordPiece) handles rare words by splitting them into common subword units, enabling models to generalize across morphological variants without a massive vocabulary."
+  },
+  {
+    "prompt": "What are the main ethical concerns with large language models?",
+    "response": "Key ethical concerns include: (1) Bias amplification — LLMs trained on internet data can perpetuate and amplify societal biases. (2) Misinformation — models can hallucinate plausible-sounding but false facts. (3) Privacy — training data may contain PII or copyrighted content. (4) Environmental cost — training large models has a significant carbon footprint. (5) Misuse — potential for generating spam, deepfakes, or manipulative content."
+  }
+]

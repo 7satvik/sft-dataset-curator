@@ -1,0 +1,90 @@
+<View>
+  <Header value="📝 Instruction-Response Annotation Interface"/>
+
+  <!-- Prompt Display -->
+  <View style="background: #1a1a2e; padding: 16px; border-radius: 8px; margin-bottom: 16px;">
+    <Header value="🧑 User Prompt" style="color: #e94560; font-size: 14px;"/>
+    <Text name="prompt" value="$prompt" style="color: #eee; font-size: 15px; line-height: 1.6;"/>
+  </View>
+
+  <!-- Response Display -->
+  <View style="background: #16213e; padding: 16px; border-radius: 8px; margin-bottom: 24px;">
+    <Header value="🤖 Model Response" style="color: #0f3460; font-size: 14px;"/>
+    <Text name="response" value="$response" style="color: #ddd; font-size: 15px; line-height: 1.6;"/>
+  </View>
+
+  <!-- Domain Category -->
+  <View style="margin-bottom: 16px;">
+    <Header value="📂 Domain Category"/>
+    <Choices name="domain_category" toName="prompt" choice="single" showInline="true">
+      <Choice value="factual_qa" alias="Factual QA"/>
+      <Choice value="creative_writing" alias="Creative Writing"/>
+      <Choice value="code_generation" alias="Code Generation"/>
+      <Choice value="reasoning" alias="Reasoning"/>
+      <Choice value="summarization" alias="Summarization"/>
+      <Choice value="instruction_following" alias="Instruction Following"/>
+      <Choice value="conversation" alias="Conversation"/>
+      <Choice value="math_problem_solving" alias="Math / Problem Solving"/>
+    </Choices>
+  </View>
+
+  <!-- Quality Ratings -->
+  <View style="margin-bottom: 16px;">
+    <Header value="⭐ Helpfulness (1–5)"/>
+    <Rating name="helpfulness" toName="response" maxRating="5" icon="star"/>
+
+    <Header value="✅ Factual Accuracy (1–5)"/>
+    <Rating name="accuracy" toName="response" maxRating="5" icon="star"/>
+
+    <Header value="🔗 Coherence &amp; Fluency (1–5)"/>
+    <Rating name="coherence" toName="response" maxRating="5" icon="star"/>
+
+    <Header value="🛡️ Safety &amp; Harmlessness (1–5)"/>
+    <Rating name="safety" toName="response" maxRating="5" icon="star"/>
+
+    <Header value="✂️ Conciseness (1–5)"/>
+    <Rating name="conciseness" toName="response" maxRating="5" icon="star"/>
+  </View>
+
+  <!-- Overall Verdict -->
+  <View style="margin-bottom: 16px;">
+    <Header value="🏁 Overall Verdict"/>
+    <Choices name="verdict" toName="response" choice="single" showInline="true">
+      <Choice value="accept" alias="✅ Accept"/>
+      <Choice value="accept_with_edits" alias="✏️ Accept with Edits"/>
+      <Choice value="reject" alias="❌ Reject"/>
+    </Choices>
+  </View>
+
+  <!-- Rejection Reason (shown when rejected) -->
+  <View style="margin-bottom: 16px;">
+    <Header value="🚫 Rejection Reason (if applicable)"/>
+    <Choices name="rejection_reason" toName="response" choice="multiple" showInline="true">
+      <Choice value="contains_pii" alias="Contains PII"/>
+      <Choice value="harmful_content" alias="Harmful Content"/>
+      <Choice value="incoherent_response" alias="Incoherent Response"/>
+      <Choice value="off_topic" alias="Off-Topic"/>
+      <Choice value="plagiarized" alias="Plagiarized"/>
+    </Choices>
+  </View>
+
+  <!-- Tags -->
+  <View style="margin-bottom: 16px;">
+    <Header value="🏷️ Tags"/>
+    <Choices name="tags" toName="response" choice="multiple" showInline="true">
+      <Choice value="verified" alias="Verified"/>
+      <Choice value="needs_review" alias="Needs Review"/>
+      <Choice value="gold_standard" alias="Gold Standard"/>
+      <Choice value="synthetic" alias="Synthetic"/>
+      <Choice value="human_authored" alias="Human Authored"/>
+    </Choices>
+  </View>
+
+  <!-- Annotator Notes -->
+  <View>
+    <Header value="📋 Annotator Notes"/>
+    <TextArea name="notes" toName="response"
+              placeholder="Add any additional observations, corrections, or context..."
+              rows="4" editable="true"/>
+  </View>
+</View>
